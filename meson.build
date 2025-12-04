@@ -10,12 +10,12 @@ dependency_libadwaita = dependency('libadwaita-1')
 # Include the framework source
 sources = [
   'main.cpp',
-  '../framework/adw_simple.cpp'
+  'framework/adw_simple.cpp'
 ]
 
 executable('my-app',
   sources,
-  include_directories: include_directories('../framework'),
+  include_directories: include_directories('framework'),
   dependencies: [dependency_libadwaita],
   install: true
 )

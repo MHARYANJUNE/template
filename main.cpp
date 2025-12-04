@@ -15,8 +15,9 @@ public:
 
 int main(int argc, char *argv[]) {
   AdwSimple::App app("com.example.MyApp", [](GtkApplication *app) {
-    MyWindow *window = new MyWindow(app);
+    auto *window = new MyWindow(app);
     window->show();
+    // Note: GTK's reference counting system manages the window's lifecycle
   });
   return app.run(argc, argv);
 }

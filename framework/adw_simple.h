@@ -36,7 +36,7 @@ protected:
 class App {
 public:
   App(const std::string &app_id,
-      std::function<void(GtkApplication *)> activate_callback);
+      const std::function<void(GtkApplication *)> &activate_callback);
   ~App();
 
   // Run the application

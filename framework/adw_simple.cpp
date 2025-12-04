@@ -77,7 +77,7 @@ void Window::show() { gtk_window_present(GTK_WINDOW(window_)); }
 
 // App implementation
 App::App(const std::string &app_id,
-         std::function<void(GtkApplication *)> activate_callback)
+         const std::function<void(GtkApplication *)> &activate_callback)
     : activate_callback_(activate_callback) {
   app_ = adw_application_new(app_id.c_str(), G_APPLICATION_DEFAULT_FLAGS);
   g_signal_connect(app_, "activate", G_CALLBACK(on_activate), this);

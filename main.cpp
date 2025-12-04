@@ -1,4 +1,4 @@
-#include "../framework/adw_simple.h"
+#include "adw_simple.h"
 
 class MyWindow : public AdwSimple::Window {
 public:
